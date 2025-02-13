@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Instagram, TikTok, Youtube } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,6 +19,24 @@ const Navbar = () => {
     { name: "Services", href: "#services" },
     { name: "Benefits", href: "#benefits" },
     { name: "Contact", href: "#contact" },
+  ];
+
+  const socialLinks = [
+    { 
+      icon: Instagram, 
+      href: "https://www.instagram.com/smartflowsolutionssa/",
+      label: "Instagram"
+    },
+    { 
+      icon: TikTok, 
+      href: "https://www.tiktok.com/@smartflowsolutionssa",
+      label: "TikTok"
+    },
+    { 
+      icon: Youtube, 
+      href: "https://www.youtube.com/@smartflowsolutionsa",
+      label: "Youtube"
+    },
   ];
 
   return (
@@ -44,6 +62,20 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
+            <div className="flex items-center space-x-4 ml-4">
+              {socialLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-accent transition-colors duration-300"
+                  aria-label={link.label}
+                >
+                  <link.icon className="h-5 w-5" />
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -71,6 +103,20 @@ const Navbar = () => {
                   {link.name}
                 </a>
               ))}
+              <div className="flex items-center space-x-4 px-3 py-2">
+                {socialLinks.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 hover:text-accent transition-colors duration-300"
+                    aria-label={link.label}
+                  >
+                    <link.icon className="h-5 w-5" />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         )}
