@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import { Menu, X, Instagram, TikTok, Youtube } from "lucide-react";
+import { Menu, X, Instagram, Youtube, Music2 } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,7 +28,7 @@ const Navbar = () => {
       label: "Instagram"
     },
     { 
-      icon: TikTok, 
+      icon: Music2, 
       href: "https://www.tiktok.com/@smartflowsolutionssa",
       label: "TikTok"
     },

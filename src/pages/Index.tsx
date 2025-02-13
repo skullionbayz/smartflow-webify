@@ -1,6 +1,7 @@
+
 import { useEffect } from "react";
 import Navbar from "../components/Navbar";
-import { ArrowRight, Bot, Globe, Clock, ChevronDown, ExternalLink, Check, Instagram, TikTok, Youtube, Mail } from "lucide-react";
+import { ArrowRight, Bot, Globe, Clock, ChevronDown, ExternalLink, Check, Instagram, Music2, Youtube, Mail } from "lucide-react";
 
 const Index = () => {
   useEffect(() => {
@@ -348,7 +349,7 @@ const Index = () => {
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-accent transition-colors duration-300"
                 >
-                  <TikTok className="h-6 w-6" />
+                  <Music2 className="h-6 w-6" />
                 </a>
                 <a
                   href="https://www.youtube.com/@smartflowsolutionsa"
