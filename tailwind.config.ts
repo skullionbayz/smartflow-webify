@@ -36,7 +36,7 @@ export default {
         accent: {
           DEFAULT: "#E5DEFF", // Soft Purple from logo
           hover: "#FFDEE2", // Soft Pink from logo
-          foreground: "#2D3648",
+          foreground: "#000000", // Black text for better visibility
         },
       },
       keyframes: {

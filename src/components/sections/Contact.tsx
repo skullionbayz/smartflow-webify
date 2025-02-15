@@ -10,7 +10,7 @@ const Contact = () => {
           <p className="text-lg text-gray-200 mb-8 max-w-2xl mx-auto">
             Contact us today to discuss how we can help automate and scale your business.
           </p>
-          <button className="px-8 py-3 bg-accent text-white rounded-lg hover:bg-accent/90 transition-colors duration-300">
+          <button className="px-8 py-3 bg-accent text-accent-foreground rounded-lg hover:bg-[#FFDEE2] transition-colors duration-300">
             Contact Us
           </button>
         </div>

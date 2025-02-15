@@ -69,7 +69,7 @@ const Pricing = () => {
               style={{ animationDelay: `${index * 200}ms` }}
             >
               {plan.recommended && (
-                <div className="absolute -top-4 left-0 right-0 mx-auto w-fit px-4 py-1 bg-accent text-white text-sm rounded-full">
+                <div className="absolute -top-4 left-0 right-0 mx-auto w-fit px-4 py-1 bg-accent text-accent-foreground text-sm rounded-full">
                   Recommended
                 </div>
               )}
@@ -85,7 +85,7 @@ const Pricing = () => {
                 <button
                   className={`w-full py-2 px-4 rounded-lg mb-8 transition-colors duration-300 ${
                     plan.recommended
-                      ? "bg-accent text-white hover:bg-accent/90"
+                      ? "bg-accent text-accent-foreground hover:bg-[#FFDEE2]"
                       : "bg-primary/10 text-primary hover:bg-primary/20"
                   }`}
                 >

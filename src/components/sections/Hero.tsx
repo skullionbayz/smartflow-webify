@@ -14,7 +14,7 @@ const Hero = () => {
         <div className="flex justify-center gap-4 animate-fade-up">
           <a
             href="#contact"
-            className="inline-flex items-center px-6 py-3 bg-accent text-white rounded-lg hover:bg-accent/90 transition-colors duration-300"
+            className="inline-flex items-center px-6 py-3 bg-accent text-accent-foreground rounded-lg hover:bg-[#FFDEE2] transition-colors duration-300"
           >
             Get Started
             <ArrowRight className="ml-2 h-5 w-5" />
