@@ -34,12 +34,10 @@ export default {
           foreground: "#2D3648",
         },
         accent: {
-          DEFAULT: "#6366F1",
-          foreground: "#ffffff",
+          DEFAULT: "#E5DEFF", // Soft Purple from logo
+          hover: "#FFDEE2", // Soft Pink from logo
+          foreground: "#2D3648",
         },
-      },
-      fontFamily: {
-        sans: ["Inter", "sans-serif"],
       },
       keyframes: {
         "fade-up": {

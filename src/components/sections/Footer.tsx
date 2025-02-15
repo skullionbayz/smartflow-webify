@@ -5,13 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-primary/5 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="text-xl font-semibold text-primary mb-4">SmartFlow Solutions</h3>
-            <p className="text-gray-600 mb-2">♾️ Work smarter not harder, with automation.</p>
-            <p className="text-gray-600 mb-2">💬 Custom websites & chatbots that work for you.</p>
-            <p className="text-gray-600">🍃 Let your business flow effortlessly.</p>
-          </div>
+        <div className="grid md:grid-cols-2 gap-8">
           <div>
             <h3 className="text-xl font-semibold text-primary mb-4">Contact Us</h3>
             <a 
