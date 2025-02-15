@@ -39,7 +39,12 @@ const Services = () => {
               className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 animate-on-scroll opacity-0"
               style={{ animationDelay: `${index * 200}ms` }}
             >
-              <service.icon className="h-12 w-12 text-accent mb-6" />
+              <service.icon 
+                className="h-12 w-12 mb-6" 
+                stroke="#000000" 
+                strokeWidth={1.5}
+                fill="#E5DEFF"
+              />
               <h3 className="text-xl font-semibold text-primary mb-4">
                 {service.title}
               </h3>

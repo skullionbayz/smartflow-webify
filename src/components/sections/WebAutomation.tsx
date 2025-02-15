@@ -1,3 +1,4 @@
+
 import { Globe, Bot, Sparkles, Calendar, CreditCard, Search, MessageSquare, Star, Check } from "lucide-react";
 
 const websiteTypes = [
@@ -84,7 +85,12 @@ const WebAutomation = () => {
               className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 animate-on-scroll opacity-0"
               style={{ animationDelay: `${index * 200}ms` }}
             >
-              <type.icon className="h-12 w-12 text-accent mb-6" />
+              <type.icon 
+                className="h-12 w-12 mb-6" 
+                stroke="#000000" 
+                strokeWidth={1.5}
+                fill="#E5DEFF"
+              />
               <h3 className="text-xl font-semibold text-primary mb-4">
                 {type.title}
               </h3>
@@ -92,7 +98,7 @@ const WebAutomation = () => {
               <div className="space-y-3">
                 {type.features.map((feature, featureIndex) => (
                   <div key={featureIndex} className="flex items-start">
-                    <Check className="h-5 w-5 text-accent shrink-0 mt-0.5" />
+                    <Check className="h-5 w-5 shrink-0 mt-0.5" stroke="#000000" strokeWidth={1.5} fill="#E5DEFF" />
                     <span className="ml-3 text-gray-600">{feature}</span>
                   </div>
                 ))}
@@ -109,7 +115,12 @@ const WebAutomation = () => {
               className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 animate-on-scroll opacity-0"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <feature.icon className="h-10 w-10 text-accent mb-4" />
+              <feature.icon 
+                className="h-10 w-10 mb-4" 
+                stroke="#000000" 
+                strokeWidth={1.5}
+                fill="#E5DEFF"
+              />
               <h3 className="text-lg font-semibold text-primary mb-2">{feature.title}</h3>
               <p className="text-gray-600">{feature.description}</p>
             </div>
