@@ -27,7 +27,7 @@ const Index = () => {
 
     // Smooth scrolling
     const handleSmoothScroll = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
+      const target = e.target as HTMLAnchorElement;
       if (target.tagName === 'A' && target.hash) {
         e.preventDefault();
         const element = document.querySelector(target.hash);

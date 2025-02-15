@@ -1,5 +1,4 @@
-
-import { Globe, Bot, Sparkles, Calendar, CreditCard, Search, MessageSquare, Star } from "lucide-react";
+import { Globe, Bot, Sparkles, Calendar, CreditCard, Search, MessageSquare, Star, Check } from "lucide-react";
 
 const websiteTypes = [
   {
