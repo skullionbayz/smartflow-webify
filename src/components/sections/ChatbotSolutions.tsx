@@ -1,5 +1,6 @@
 
 import { Book, Settings, Bot, Check, MessageSquare, Brain } from "lucide-react";
+import IconWithWatercolor from "../IconWithWatercolor";
 
 const chatbotTypes = [
   {
@@ -13,7 +14,8 @@ const chatbotTypes = [
       "Perfect for social media platforms",
       "Cost-effective solution"
     ],
-    icon: MessageSquare
+    icon: MessageSquare,
+    watercolorSrc: "/lovable-uploads/968e1a47-6d99-4387-a580-97b08b43447f.png"
   },
   {
     title: "Smart AI Support Agent",
@@ -26,7 +28,29 @@ const chatbotTypes = [
       "Sales support capabilities",
       "Detailed interaction analytics"
     ],
-    icon: Brain
+    icon: Brain,
+    watercolorSrc: "/lovable-uploads/8967a3c5-55b1-49cc-9313-f7f052afa2c9.png"
+  }
+];
+
+const featureIcons = [
+  {
+    icon: Book,
+    watercolorSrc: "/lovable-uploads/69f93d6e-1a99-482f-825c-88717106163a.png",
+    title: "Knowledge Integration",
+    description: "Our chatbots learn from your business documentation, ensuring accurate and consistent responses based on your specific products and procedures."
+  },
+  {
+    icon: Settings,
+    watercolorSrc: "/lovable-uploads/accc886c-20da-4ffa-8e3d-ee4d63371ce6.png",
+    title: "Customized Behavior",
+    description: "Configure your chatbot to match your brand's tone of voice and follow your business policies for a seamless customer experience."
+  },
+  {
+    icon: Bot,
+    watercolorSrc: "/lovable-uploads/ed48f4c9-9ad0-469e-87ac-b23e50bda2db.png",
+    title: "24/7 Support",
+    description: "Provide instant responses to customer inquiries around the clock, ensuring no question goes unanswered."
   }
 ];
 
@@ -34,7 +58,7 @@ const ChatbotSolutions = () => {
   return (
     <section id="chatbots" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 animate-on-scroll opacity-0">
+        <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
             Smart Chatbot Solutions
           </h2>
@@ -44,70 +68,33 @@ const ChatbotSolutions = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white p-8 rounded-lg shadow-sm animate-on-scroll opacity-0">
-            <Book 
-              className="h-12 w-12 mb-6" 
-              stroke="#000000" 
-              strokeWidth={1.5}
-              fill="#E5DEFF"
-            />
-            <h3 className="text-xl font-semibold text-primary mb-4">Knowledge Integration</h3>
-            <p className="text-gray-600">
-              Our chatbots learn from your business documentation, ensuring accurate and consistent responses based on your specific products and procedures.
-            </p>
-          </div>
-          <div className="bg-white p-8 rounded-lg shadow-sm animate-on-scroll opacity-0">
-            <Settings 
-              className="h-12 w-12 mb-6" 
-              stroke="#000000" 
-              strokeWidth={1.5}
-              fill="#E5DEFF"
-            />
-            <h3 className="text-xl font-semibold text-primary mb-4">Customized Behavior</h3>
-            <p className="text-gray-600">
-              Configure your chatbot to match your brand's tone of voice and follow your business policies for a seamless customer experience.
-            </p>
-          </div>
-          <div className="bg-white p-8 rounded-lg shadow-sm animate-on-scroll opacity-0">
-            <Bot 
-              className="h-12 w-12 mb-6" 
-              stroke="#000000" 
-              strokeWidth={1.5}
-              fill="#E5DEFF"
-            />
-            <h3 className="text-xl font-semibold text-primary mb-4">24/7 Support</h3>
-            <p className="text-gray-600">
-              Provide instant responses to customer inquiries around the clock, ensuring no question goes unanswered.
-            </p>
-          </div>
+          {featureIcons.map((feature, index) => (
+            <div key={index} className="bg-white p-8 rounded-lg shadow-sm">
+              <IconWithWatercolor 
+                Icon={feature.icon} 
+                watercolorSrc={feature.watercolorSrc}
+              />
+              <h3 className="text-xl font-semibold text-primary mb-4 mt-6">{feature.title}</h3>
+              <p className="text-gray-600">{feature.description}</p>
+            </div>
+          ))}
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 mt-12">
           {chatbotTypes.map((type, index) => (
-            <div 
-              key={index}
-              className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 animate-on-scroll opacity-0"
-              style={{ animationDelay: `${index * 200}ms` }}
-            >
-              <type.icon 
-                className="h-12 w-12 mb-6" 
-                stroke="#000000" 
-                strokeWidth={1.5}
-                fill="#E5DEFF"
+            <div key={index} className="bg-white p-8 rounded-lg shadow-sm">
+              <IconWithWatercolor 
+                Icon={type.icon} 
+                watercolorSrc={type.watercolorSrc}
               />
-              <h3 className="text-xl font-semibold text-primary mb-4">
+              <h3 className="text-xl font-semibold text-primary mb-4 mt-6">
                 {type.title}
               </h3>
               <p className="text-gray-600 mb-6">{type.description}</p>
               <div className="space-y-3">
                 {type.features.map((feature, featureIndex) => (
                   <div key={featureIndex} className="flex items-start">
-                    <Check 
-                      className="h-5 w-5 shrink-0 mt-0.5" 
-                      stroke="#000000" 
-                      strokeWidth={1.5}
-                      fill="#E5DEFF"
-                    />
+                    <Check className="h-5 w-5 shrink-0 mt-0.5" stroke="#000000" strokeWidth={1.5} />
                     <span className="ml-3 text-gray-600">{feature}</span>
                   </div>
                 ))}
