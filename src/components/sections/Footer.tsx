@@ -6,7 +6,19 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 gap-8">
           <div>
             <h3 className="text-xl font-semibold text-primary mb-4">Contact Us</h3>
-            <div className="flex items-center text-gray-600">
+            <div className="flex items-center text-gray-600 space-x-2">
+              <div className="relative w-6 h-6">
+                <img 
+                  src="/lovable-uploads/c475d0d5-f695-4a79-9752-b1dc8d36c154.png"
+                  alt="watercolor background" 
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <img
+                  src="/lovable-uploads/d35c1625-245c-4cd0-ad3e-41a19966f462.png"
+                  alt="Email"
+                  className="relative z-10 h-6 w-6"
+                />
+              </div>
               <span>smartflowsolutions@protonmail.com</span>
             </div>
           </div>
