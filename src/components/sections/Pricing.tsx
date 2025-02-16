@@ -51,7 +51,7 @@ const Pricing = () => {
   return (
     <section id="pricing" className="py-20 bg-secondary/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 animate-on-scroll opacity-0">
+        <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
             Simple, Transparent Pricing
           </h2>
@@ -63,10 +63,9 @@ const Pricing = () => {
           {pricingPlans.map((plan, index) => (
             <div
               key={index}
-              className={`relative bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 animate-on-scroll opacity-0 ${
+              className={`relative bg-white rounded-xl shadow-sm ${
                 plan.recommended ? "ring-2 ring-accent" : ""
               }`}
-              style={{ animationDelay: `${index * 200}ms` }}
             >
               {plan.recommended && (
                 <div className="absolute -top-4 left-0 right-0 mx-auto w-fit px-4 py-1 bg-accent text-accent-foreground text-sm rounded-full">
@@ -83,10 +82,10 @@ const Pricing = () => {
                 </div>
                 <p className="text-gray-600 mb-6">{plan.description}</p>
                 <button
-                  className={`w-full py-2 px-4 rounded-lg mb-8 transition-colors duration-300 ${
+                  className={`w-full py-2 px-4 rounded-lg mb-8 ${
                     plan.recommended
-                      ? "bg-accent text-accent-foreground hover:bg-[#FFDEE2]"
-                      : "bg-primary/10 text-primary hover:bg-primary/20"
+                      ? "bg-accent text-accent-foreground"
+                      : "bg-primary/10 text-primary"
                   }`}
                 >
                   Get Started
@@ -94,7 +93,12 @@ const Pricing = () => {
                 <div className="space-y-3">
                   {plan.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-start">
-                      <Check className="h-5 w-5 text-accent shrink-0 mt-0.5" />
+                      <Check 
+                        className="h-5 w-5 text-accent shrink-0 mt-0.5" 
+                        stroke="#000000" 
+                        strokeWidth={1.5}
+                        fill="#E5DEFF"
+                      />
                       <span className="ml-3 text-gray-600">{feature}</span>
                     </div>
                   ))}

@@ -8,41 +8,17 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 gap-8">
           <div>
             <h3 className="text-xl font-semibold text-primary mb-4">Contact Us</h3>
-            <a 
-              href="mailto:smartflowsolutions@protonmail.com"
-              className="flex items-center text-gray-600 hover:text-accent transition-colors duration-300 mb-2"
-            >
+            <div className="flex items-center text-gray-600">
               <Mail className="h-5 w-5 mr-2" />
               smartflowsolutions@protonmail.com
-            </a>
+            </div>
           </div>
           <div>
             <h3 className="text-xl font-semibold text-primary mb-4">Follow Us</h3>
             <div className="flex space-x-4">
-              <a
-                href="https://www.instagram.com/smartflowsolutionssa/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 hover:text-accent transition-colors duration-300"
-              >
-                <Instagram className="h-6 w-6" />
-              </a>
-              <a
-                href="https://www.tiktok.com/@smartflowsolutionssa"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 hover:text-accent transition-colors duration-300"
-              >
-                <Music2 className="h-6 w-6" />
-              </a>
-              <a
-                href="https://www.youtube.com/@smartflowsolutionsa"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 hover:text-accent transition-colors duration-300"
-              >
-                <Youtube className="h-6 w-6" />
-              </a>
+              <Instagram className="h-6 w-6 text-gray-600" />
+              <Music2 className="h-6 w-6 text-gray-600" />
+              <Youtube className="h-6 w-6 text-gray-600" />
             </div>
           </div>
         </div>

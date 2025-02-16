@@ -3,7 +3,7 @@ const Benefits = () => {
   return (
     <section id="benefits" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 animate-on-scroll opacity-0">
+        <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
             Why Choose SmartFlow
           </h2>
@@ -22,8 +22,7 @@ const Benefits = () => {
           ].map((benefit, index) => (
             <div
               key={index}
-              className="bg-secondary/30 p-6 rounded-lg animate-on-scroll opacity-0"
-              style={{ animationDelay: `${index * 100}ms` }}
+              className="bg-secondary/30 p-6 rounded-lg"
             >
               <p className="text-primary font-medium">{benefit}</p>
             </div>

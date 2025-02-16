@@ -23,7 +23,7 @@ const Services = () => {
   return (
     <section id="services" className="py-20 bg-secondary/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 animate-on-scroll opacity-0">
+        <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
             Our Services
           </h2>
@@ -36,8 +36,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 animate-on-scroll opacity-0"
-              style={{ animationDelay: `${index * 200}ms` }}
+              className="bg-white p-8 rounded-lg shadow-sm"
             >
               <service.icon 
                 className="h-12 w-12 mb-6" 
