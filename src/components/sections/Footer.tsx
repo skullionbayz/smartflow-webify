@@ -1,6 +1,4 @@
 
-import { Mail, Instagram, Music2, Youtube } from "lucide-react";
-
 const Footer = () => {
   return (
     <footer className="bg-primary/5 py-12">
@@ -9,16 +7,27 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold text-primary mb-4">Contact Us</h3>
             <div className="flex items-center text-gray-600">
-              <Mail className="h-5 w-5 mr-2" />
-              smartflowsolutions@protonmail.com
+              <span>smartflowsolutions@protonmail.com</span>
             </div>
           </div>
           <div>
             <h3 className="text-xl font-semibold text-primary mb-4">Follow Us</h3>
             <div className="flex space-x-4">
-              <Instagram className="h-6 w-6 text-gray-600" />
-              <Music2 className="h-6 w-6 text-gray-600" />
-              <Youtube className="h-6 w-6 text-gray-600" />
+              <img
+                src="/lovable-uploads/6e04640e-d2cb-4f3a-8d44-4e60c6f188a0.png"
+                alt="Instagram"
+                className="h-6 w-6"
+              />
+              <img
+                src="/lovable-uploads/405f27a9-dca3-48c0-9b32-2a442d5ed6c2.png"
+                alt="TikTok"
+                className="h-6 w-6"
+              />
+              <img
+                src="/lovable-uploads/63795123-7230-497c-b91e-b7cd9a1f1ae7.png"
+                alt="YouTube"
+                className="h-6 w-6"
+              />
             </div>
           </div>
         </div>

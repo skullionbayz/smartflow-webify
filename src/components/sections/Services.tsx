@@ -38,13 +38,19 @@ const Services = () => {
               key={index}
               className="bg-white p-8 rounded-lg shadow-sm"
             >
-              <service.icon 
-                className="h-12 w-12 mb-6" 
-                stroke="#000000" 
-                strokeWidth={1.5}
-                fill="#E5DEFF"
-              />
-              <h3 className="text-xl font-semibold text-primary mb-4">
+              <div className="relative w-12 h-12">
+                <img 
+                  src={index % 2 === 0 ? "/lovable-uploads/c475d0d5-f695-4a79-9752-b1dc8d36c154.png" : "/lovable-uploads/1e83f3e7-6332-42a0-8a9a-044753b12d23.png"} 
+                  alt="watercolor background" 
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <service.icon 
+                  className="relative z-10 h-12 w-12" 
+                  stroke="#000000" 
+                  strokeWidth={1.5}
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-primary mb-4 mt-6">
                 {service.title}
               </h3>
               <p className="text-gray-600">{service.description}</p>

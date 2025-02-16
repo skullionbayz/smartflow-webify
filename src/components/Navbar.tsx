@@ -1,6 +1,4 @@
 
-import { Instagram, Youtube, Music2 } from "lucide-react";
-
 const Navbar = () => {
   return (
     <nav className="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
@@ -16,9 +14,21 @@ const Navbar = () => {
           </div>
           
           <div className="hidden md:flex items-center space-x-4">
-            <Instagram className="h-5 w-5 text-gray-600" />
-            <Music2 className="h-5 w-5 text-gray-600" />
-            <Youtube className="h-5 w-5 text-gray-600" />
+            <img
+              src="/lovable-uploads/6e04640e-d2cb-4f3a-8d44-4e60c6f188a0.png"
+              alt="Instagram"
+              className="h-5 w-5"
+            />
+            <img
+              src="/lovable-uploads/405f27a9-dca3-48c0-9b32-2a442d5ed6c2.png"
+              alt="TikTok"
+              className="h-5 w-5"
+            />
+            <img
+              src="/lovable-uploads/63795123-7230-497c-b91e-b7cd9a1f1ae7.png"
+              alt="YouTube"
+              className="h-5 w-5"
+            />
           </div>
         </div>
       </div>

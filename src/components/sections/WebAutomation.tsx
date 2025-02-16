@@ -89,10 +89,19 @@ const WebAutomation = () => {
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {websiteTypes.map((type, index) => (
             <div key={index} className="bg-white p-8 rounded-lg shadow-sm">
-              <IconWithWatercolor 
-                Icon={type.icon} 
-                watercolorSrc={type.watercolorSrc}
-              />
+              <div className="relative w-12 h-12">
+                <img 
+                  src={index % 2 === 0 ? "/lovable-uploads/c475d0d5-f695-4a79-9752-b1dc8d36c154.png" : "/lovable-uploads/1e83f3e7-6332-42a0-8a9a-044753b12d23.png"} 
+                  alt="watercolor background" 
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <type.icon 
+                  className="relative z-10" 
+                  size={48} 
+                  stroke="#000000" 
+                  strokeWidth={1.5}
+                />
+              </div>
               <h3 className="text-xl font-semibold text-primary mb-4 mt-6">
                 {type.title}
               </h3>
@@ -100,7 +109,14 @@ const WebAutomation = () => {
               <div className="space-y-3">
                 {type.features.map((feature, featureIndex) => (
                   <div key={featureIndex} className="flex items-start">
-                    <Check className="h-5 w-5 shrink-0 mt-0.5" stroke="#000000" strokeWidth={1.5} />
+                    <div className="relative w-5 h-5">
+                      <img 
+                        src={featureIndex % 2 === 0 ? "/lovable-uploads/c475d0d5-f695-4a79-9752-b1dc8d36c154.png" : "/lovable-uploads/1e83f3e7-6332-42a0-8a9a-044753b12d23.png"}
+                        alt="watercolor background" 
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
+                      <Check className="relative z-10 h-5 w-5 shrink-0 mt-0.5" stroke="#000000" strokeWidth={1.5} />
+                    </div>
                     <span className="ml-3 text-gray-600">{feature}</span>
                   </div>
                 ))}
@@ -112,10 +128,19 @@ const WebAutomation = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {automationFeatures.map((feature, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
-              <IconWithWatercolor 
-                Icon={feature.icon} 
-                watercolorSrc={feature.watercolorSrc}
-              />
+              <div className="relative w-12 h-12">
+                <img 
+                  src={index % 2 === 0 ? "/lovable-uploads/c475d0d5-f695-4a79-9752-b1dc8d36c154.png" : "/lovable-uploads/1e83f3e7-6332-42a0-8a9a-044753b12d23.png"} 
+                  alt="watercolor background" 
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <feature.icon 
+                  className="relative z-10" 
+                  size={48} 
+                  stroke="#000000" 
+                  strokeWidth={1.5}
+                />
+              </div>
               <h3 className="text-lg font-semibold text-primary mb-2 mt-4">{feature.title}</h3>
               <p className="text-gray-600">{feature.description}</p>
             </div>
