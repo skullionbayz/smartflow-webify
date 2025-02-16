@@ -93,12 +93,18 @@ const Pricing = () => {
                 <div className="space-y-3">
                   {plan.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-start">
-                      <Check 
-                        className="h-5 w-5 text-accent shrink-0 mt-0.5" 
-                        stroke="#000000" 
-                        strokeWidth={1.5}
-                        fill="#E5DEFF"
-                      />
+                      <div className="relative w-5 h-5">
+                        <img 
+                          src={"/lovable-uploads/c475d0d5-f695-4a79-9752-b1dc8d36c154.png"}
+                          alt="watercolor background" 
+                          className="absolute inset-0 w-full h-full object-cover"
+                        />
+                        <Check 
+                          className="relative z-10 h-5 w-5 text-accent shrink-0 mt-0.5" 
+                          stroke="#000000" 
+                          strokeWidth={1.5}
+                        />
+                      </div>
                       <span className="ml-3 text-gray-600">{feature}</span>
                     </div>
                   ))}

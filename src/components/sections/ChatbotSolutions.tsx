@@ -15,7 +15,7 @@ const chatbotTypes = [
       "Cost-effective solution"
     ],
     icon: MessageSquare,
-    watercolorSrc: "/lovable-uploads/968e1a47-6d99-4387-a580-97b08b43447f.png"
+    watercolorSrc: "/lovable-uploads/c475d0d5-f695-4a79-9752-b1dc8d36c154.png"
   },
   {
     title: "Smart AI Support Agent",
@@ -29,26 +29,26 @@ const chatbotTypes = [
       "Detailed interaction analytics"
     ],
     icon: Brain,
-    watercolorSrc: "/lovable-uploads/8967a3c5-55b1-49cc-9313-f7f052afa2c9.png"
+    watercolorSrc: "/lovable-uploads/1e83f3e7-6332-42a0-8a9a-044753b12d23.png"
   }
 ];
 
 const featureIcons = [
   {
     icon: Book,
-    watercolorSrc: "/lovable-uploads/69f93d6e-1a99-482f-825c-88717106163a.png",
+    watercolorSrc: "/lovable-uploads/c475d0d5-f695-4a79-9752-b1dc8d36c154.png",
     title: "Knowledge Integration",
     description: "Our chatbots learn from your business documentation, ensuring accurate and consistent responses based on your specific products and procedures."
   },
   {
     icon: Settings,
-    watercolorSrc: "/lovable-uploads/accc886c-20da-4ffa-8e3d-ee4d63371ce6.png",
+    watercolorSrc: "/lovable-uploads/1e83f3e7-6332-42a0-8a9a-044753b12d23.png",
     title: "Customized Behavior",
     description: "Configure your chatbot to match your brand's tone of voice and follow your business policies for a seamless customer experience."
   },
   {
     icon: Bot,
-    watercolorSrc: "/lovable-uploads/ed48f4c9-9ad0-469e-87ac-b23e50bda2db.png",
+    watercolorSrc: "/lovable-uploads/c475d0d5-f695-4a79-9752-b1dc8d36c154.png",
     title: "24/7 Support",
     description: "Provide instant responses to customer inquiries around the clock, ensuring no question goes unanswered."
   }
@@ -67,20 +67,7 @@ const ChatbotSolutions = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {featureIcons.map((feature, index) => (
-            <div key={index} className="bg-white p-8 rounded-lg shadow-sm">
-              <IconWithWatercolor 
-                Icon={feature.icon} 
-                watercolorSrc={feature.watercolorSrc}
-              />
-              <h3 className="text-xl font-semibold text-primary mb-4 mt-6">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-8 mt-12">
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
           {chatbotTypes.map((type, index) => (
             <div key={index} className="bg-white p-8 rounded-lg shadow-sm">
               <IconWithWatercolor 
@@ -94,11 +81,31 @@ const ChatbotSolutions = () => {
               <div className="space-y-3">
                 {type.features.map((feature, featureIndex) => (
                   <div key={featureIndex} className="flex items-start">
-                    <Check className="h-5 w-5 shrink-0 mt-0.5" stroke="#000000" strokeWidth={1.5} />
+                    <div className="relative w-5 h-5">
+                      <img 
+                        src={"/lovable-uploads/c475d0d5-f695-4a79-9752-b1dc8d36c154.png"}
+                        alt="watercolor background" 
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
+                      <Check className="relative z-10 h-5 w-5 shrink-0 mt-0.5" stroke="#000000" strokeWidth={1.5} />
+                    </div>
                     <span className="ml-3 text-gray-600">{feature}</span>
                   </div>
                 ))}
               </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {featureIcons.map((feature, index) => (
+            <div key={index} className="bg-white p-8 rounded-lg shadow-sm">
+              <IconWithWatercolor 
+                Icon={feature.icon} 
+                watercolorSrc={feature.watercolorSrc}
+              />
+              <h3 className="text-xl font-semibold text-primary mb-4 mt-6">{feature.title}</h3>
+              <p className="text-gray-600">{feature.description}</p>
             </div>
           ))}
         </div>
