@@ -7,11 +7,13 @@ import Footer from "../components/sections/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col w-full">
       <Navbar />
-      <Hero />
-      <Pricing />
-      <Contact />
+      <main className="flex-1 flex flex-col">
+        <Hero />
+        <Pricing />
+        <Contact />
+      </main>
       <Footer />
     </div>
   );

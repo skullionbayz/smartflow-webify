@@ -15,7 +15,7 @@ const features = [
 const Pricing = () => {
   return (
     <section id="pricing" className="relative flex flex-col items-center py-20 bg-secondary/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center">
         <div className="text-center mb-16 flex flex-col items-center gap-4">
           <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4 animate-fade-up">
             One Simple Plan
