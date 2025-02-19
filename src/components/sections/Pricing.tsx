@@ -16,16 +16,16 @@ const Pricing = () => {
   return (
     <section id="pricing" className="relative flex flex-col items-center py-20 bg-secondary/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-        <div className="text-center mb-16 flex flex-col items-center gap-4 animate-fade-up">
-          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
+        <div className="text-center mb-16 flex flex-col items-center gap-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4 animate-fade-up">
             One Simple Plan
           </h2>
-          <p className="text-gray-600 max-w-2xl">
+          <p className="text-gray-600 max-w-2xl animate-fade-up" style={{ animationDelay: "0.2s" }}>
             Everything you need for an engaging online presence
           </p>
         </div>
-        <div className="max-w-lg w-full animate-fade-up" style={{ animationDelay: "0.2s" }}>
-          <div className="bg-white rounded-xl shadow-sm p-8 flex flex-col items-center">
+        <div className="max-w-lg w-full animate-fade-up" style={{ animationDelay: "0.3s" }}>
+          <div className="bg-white rounded-xl shadow-sm p-8 flex flex-col items-center transform transition-all duration-500 hover:scale-105 hover:shadow-lg">
             <h3 className="text-2xl font-semibold text-primary mb-2">
               Professional Animated Website
             </h3>
@@ -41,7 +41,11 @@ const Pricing = () => {
             </button>
             <div className="space-y-3 w-full">
               {features.map((feature, index) => (
-                <div key={index} className="flex items-start transform hover:scale-102 transition-transform duration-200">
+                <div 
+                  key={index} 
+                  className="flex items-start transform hover:scale-102 transition-transform duration-200 animate-fade-up"
+                  style={{ animationDelay: `${0.4 + index * 0.1}s` }}
+                >
                   <div className="relative w-5 h-5 flex-shrink-0">
                     <img 
                       src="/lovable-uploads/c475d0d5-f695-4a79-9752-b1dc8d36c154.png"
