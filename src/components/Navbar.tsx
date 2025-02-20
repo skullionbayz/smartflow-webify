@@ -24,7 +24,7 @@ const Navbar = () => {
               alt="SmartFlow Solutions Logo"
               className="h-10 w-10 rounded-full object-contain"
             />
-            <span className="text-xl font-semibold text-primary">SmartFlow Solutions</span>
+            <span className="text-xl font-semibold text-primary tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary/80 to-primary/60">SmartFlow Solutions</span>
           </div>
           
           <div className="hidden md:flex items-center space-x-4 animate-fade-in">
