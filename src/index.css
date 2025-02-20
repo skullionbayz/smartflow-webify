@@ -13,16 +13,49 @@
   }
 }
 
-/* Add custom animations */
+/* Scroll reveal animations */
+.reveal {
+  position: relative;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-bottom {
+  transform: translateY(30px);
+}
+
+.fade-left {
+  transform: translateX(-100px);
+}
+
+.fade-right {
+  transform: translateX(100px);
+}
+
+/* Custom animations */
 @keyframes float {
-  0% {
-    transform: translateY(0px);
+  0%, 100% {
+    transform: translateY(0);
   }
   50% {
     transform: translateY(-10px);
   }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
   100% {
-    transform: translateY(0px);
+    transform: translateY(6px);
+    opacity: 0;
   }
 }
 
@@ -30,58 +63,28 @@
   animation: float 3s ease-in-out infinite;
 }
 
-/* Scroll reveal animations */
-.reveal {
-  position: relative;
-  opacity: 0;
-  transition: all 1s ease-in-out;
+.animate-scroll {
+  animation: scroll 1.5s ease-in-out infinite;
 }
 
-.reveal.active {
-  opacity: 1;
+/* Grid pattern background */
+.bg-grid-pattern {
+  background-image: linear-gradient(to right, #e5e7eb 1px, transparent 1px),
+    linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 
-.active.fade-bottom {
-  animation: fade-bottom 1s ease-in;
+/* Glass effect utilities */
+.glass {
+  @apply backdrop-blur-lg bg-white/10 border border-white/20;
 }
 
-.active.fade-left {
-  animation: fade-left 1s ease-in;
+/* Hover utilities */
+.hover-scale-102:hover {
+  transform: scale(1.02);
 }
 
-.active.fade-right {
-  animation: fade-right 1s ease-in;
-}
-
-@keyframes fade-bottom {
-  0% {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fade-left {
-  0% {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fade-right {
-  0% {
-    transform: translateX(100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
+/* Custom gradients */
+.bg-gradient-primary {
+  @apply bg-gradient-to-r from-accent via-accent-hover to-accent;
 }
