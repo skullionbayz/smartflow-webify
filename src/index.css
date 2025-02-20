@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -87,4 +86,27 @@
 /* Custom gradients */
 .bg-gradient-primary {
   @apply bg-gradient-to-r from-accent via-accent-hover to-accent;
+}
+
+/* Hide scrollbar for gallery */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Enhanced gradient backgrounds */
+.bg-gradient-hero {
+  background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+}
+
+.bg-gradient-gallery {
+  background: linear-gradient(109.6deg, rgba(223,234,247,1) 11.2%, rgba(244,248,252,1) 91.1%);
+}
+
+.bg-gradient-pricing {
+  background: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
 }

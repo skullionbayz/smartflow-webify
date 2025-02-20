@@ -1,6 +1,7 @@
 
 import Navbar from "../components/Navbar";
 import Hero from "../components/sections/Hero";
+import Gallery from "../components/sections/Gallery";
 import Pricing from "../components/sections/Pricing";
 import Contact from "../components/sections/Contact";
 import Footer from "../components/sections/Footer";
@@ -11,6 +12,7 @@ const Index = () => {
       <Navbar />
       <main className="flex-1 flex flex-col">
         <Hero />
+        <Gallery />
         <Pricing />
         <Contact />
       </main>
