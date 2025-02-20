@@ -31,17 +31,17 @@ const Navbar = () => {
             <img
               src="/lovable-uploads/6e04640e-d2cb-4f3a-8d44-4e60c6f188a0.png"
               alt="Instagram"
-              className="h-5 w-5 transform hover:scale-110 transition-transform duration-200"
+              className="h-5 w-5 transform hover:scale-[2] hover:rotate-[-15deg] transition-all duration-300 cursor-pointer"
             />
             <img
               src="/lovable-uploads/405f27a9-dca3-48c0-9b32-2a442d5ed6c2.png"
               alt="TikTok"
-              className="h-5 w-5 transform hover:scale-110 transition-transform duration-200"
+              className="h-5 w-5 transform hover:scale-[2] hover:rotate-[15deg] transition-all duration-300 cursor-pointer"
             />
             <img
               src="/lovable-uploads/63795123-7230-497c-b91e-b7cd9a1f1ae7.png"
               alt="YouTube"
-              className="h-5 w-5 transform hover:scale-110 transition-transform duration-200"
+              className="h-5 w-5 transform hover:scale-[2] hover:rotate-[-15deg] transition-all duration-300 cursor-pointer"
             />
           </div>
         </div>
