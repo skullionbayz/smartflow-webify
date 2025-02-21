@@ -1,6 +1,5 @@
 
 import { useEffect, useRef } from "react";
-import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const websites = [
   {
@@ -28,26 +27,34 @@ const websites = [
 const Gallery = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  const scroll = (direction: "left" | "right") => {
-    if (scrollContainerRef.current) {
-      const scrollAmount = direction === "left" ? -400 : 400;
-      scrollContainerRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
-    }
-  };
-
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('show');
+          
+          // Start auto-scroll animation when section is visible
+          if (scrollContainerRef.current) {
+            scrollContainerRef.current.style.animationPlayState = 'running';
+          }
+        } else {
+          // Pause animation when section is not visible
+          if (scrollContainerRef.current) {
+            scrollContainerRef.current.style.animationPlayState = 'paused';
+          }
         }
       });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    if (scrollContainerRef.current) {
+      observer.observe(scrollContainerRef.current);
+    }
 
     return () => observer.disconnect();
   }, []);
+
+  // Double the items for seamless infinite scroll
+  const extendedWebsites = [...websites, ...websites];
 
   return (
     <section className="relative py-32 overflow-hidden bg-gradient-to-b from-white to-secondary/30">
@@ -64,16 +71,15 @@ const Gallery = () => {
           </p>
         </div>
 
-        <div className="relative group">
+        <div className="overflow-hidden">
           <div
             ref={scrollContainerRef}
-            className="flex space-x-6 overflow-x-auto pb-8 scroll-smooth hide-scrollbar"
+            className="flex gap-6 animate-scroll-x"
           >
-            {websites.map((website, index) => (
+            {extendedWebsites.map((website, index) => (
               <div
                 key={index}
-                className="flex-none w-80 reveal fade-right"
-                style={{ animationDelay: `${index * 0.2}s` }}
+                className="flex-none w-[300px]"
               >
                 <div className="relative group rounded-2xl overflow-hidden shadow-xl transition-all duration-300 hover:scale-105">
                   <div className="aspect-[4/3] relative">
@@ -92,19 +98,6 @@ const Gallery = () => {
               </div>
             ))}
           </div>
-
-          <button
-            onClick={() => scroll("left")}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white/90 rounded-full p-3 shadow-lg opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
-          >
-            <ArrowLeft className="w-6 h-6 text-primary" />
-          </button>
-          <button
-            onClick={() => scroll("right")}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white/90 rounded-full p-3 shadow-lg opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
-          >
-            <ArrowRight className="w-6 h-6 text-primary" />
-          </button>
         </div>
       </div>
     </section>
