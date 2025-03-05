@@ -9,6 +9,7 @@ module.exports = {
     command: "npm install"
   },
   environment: {
-    NPM_FLAGS: "--prefer-offline"
+    NODE_VERSION: "18",
+    NPM_FLAGS: "--prefer-offline --no-audit"
   }
 }

@@ -1,0 +1,13 @@
+
+[build]
+command = "npm run build"
+directory = "dist"
+
+[build.environment]
+NODE_VERSION = "18"
+
+[site]
+bucket = "dist"
+
+[build.processing]
+skip_processing = false
