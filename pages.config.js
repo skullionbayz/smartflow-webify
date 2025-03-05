@@ -6,10 +6,10 @@ module.exports = {
     directory: "dist"
   },
   install: {
-    command: "npm install"
+    command: "npm install --no-frozen-lockfile"
   },
   environment: {
     NODE_VERSION: "18",
-    NPM_FLAGS: "--prefer-offline --no-audit"
+    NPM_FLAGS: "--no-audit"
   }
 }

@@ -3,7 +3,7 @@
 // It ensures that npm is used for dependency installation
 
 module.exports = {
-  installCommand: "npm install",
+  installCommand: "npm install --no-frozen-lockfile",
   buildCommand: "npm run build",
   nodeVersion: "18", // Using Node.js version 18 for compatibility
   buildOutput: "dist"
